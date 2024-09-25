@@ -17,12 +17,13 @@
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
+  color-scheme: light dark; 
+   color: var(--white);
+  background-color: var(--black);
 }
 
 :root [data-theme=dark] {
-  color: var(--white);
-  background-color: var(--black);
+
 }
 
 button {
@@ -31,14 +32,7 @@ button {
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--black);
-    background-color: var(--gray);
-  }
-}
-
 :root [data-theme=light] {
-  color: var(--black) !important;
+  color: var(--black);
   background-color: var(--gray);
 }

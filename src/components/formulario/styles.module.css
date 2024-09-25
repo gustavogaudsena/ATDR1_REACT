@@ -84,20 +84,6 @@ form.formulario button:hover {
     }
 }
 
-@media (prefers-color-scheme: light) {
-    form.formulario button {
-        background-color: var(--primary);
-        color: var(--gray);
-    }
-
-    .formularioGroup input,
-    .formularioGroup textarea {
-        padding: 0.5rem;
-        border: none;
-        box-shadow: 1px 1px 3px var(--dark-gray_op);
-        border-radius: 0.4rem;
-    }
-}
 
 [data-theme=light] form.formulario button {
     background-color: var(--primary);

@@ -75,18 +75,6 @@
 
 }
 
-@media (prefers-color-scheme: light) {
-
-    .headerFormulario,
-    .formularioContainer {
-        background-color: var(--gray);
-    }
-
-    .headerFormularioLink,
-    .headerFormularioTitle {
-        color: var(--black);
-    }
-}
 
 [data-theme=light] .headerFormulario,
 [data-theme=light] .formularioContainer {

@@ -1,6 +1,8 @@
 .detalhes {
     background-color: var(--black);
     padding: 1rem 1rem;
+    min-height: 100vh;
+
 }
 
 .detalhes .detalhesContainerPrincipal {
@@ -133,21 +135,6 @@
         justify-content: start;
     }
 
-}
-
-@media (prefers-color-scheme: light) {
-
-    .detalhes {
-        background-color: var(--gray_op);
-    }
-
-    .detalhes .detalhesContainer svg {
-        color: var(--primary)
-    }
-
-    .detalhesNotFound {
-        color: var(--dark-gray)
-    }
 }
 
 [data-theme=light] .detalhes {

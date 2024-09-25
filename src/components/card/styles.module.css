@@ -89,35 +89,6 @@
     }
 }
 
-@media (prefers-color-scheme: light) {
-    .card {
-        background-color: var(--white);
-        color: var(--black);
-    }
-
-    .card svg {
-        color: var(--primary);
-        font-size: 1rem;
-    }
-
-    .card .cardFavorito {
-        background-color: var(--gray);
-
-    }
-
-    .card .cardGerenciadores {
-        background-color: var(--gray);
-    }
-
-    .card .cardGerenciadores svg {
-        color: var(--danger);
-    }
-
-    .card .cardGerenciadores svg:hover {
-        color: var(--black);
-    }
-
-}
 
 [data-theme=light] .card {
     background-color: var(--white);

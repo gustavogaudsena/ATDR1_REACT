@@ -48,9 +48,7 @@
     width: 100%;
 }
 
-.mainGerenciadores button[data-selected=true] {
-    color: var(--secondary);
-}
+
 
 .mainOrdenacao .mainOrdenacaoArrows {
     display: flex;
@@ -75,6 +73,23 @@
     color: var(--gray_op);
 }
 
+
+.mainGerenciadores span,
+.mainOrdenacao span {
+    color: var(--gray)
+}
+
+.mainGerenciadores button[data-selected=true] span{
+    color: var(--secondary);
+}
+
+.mainGerenciadores span:hover,
+.mainOrdenacao span:hover {
+    color: var(--secondary)
+}
+
+
+
 @media (min-width: 720px) {
     .main .mainContainerCards {
         justify-content: flex-start;
@@ -96,23 +111,6 @@
     }
 }
 
-@media (prefers-color-scheme: light) {
-    .mainContainerControle button svg {
-        color: var(--primary);
-    }
-
-    .mainContainerControle button:hover {
-        color: var(--primary);
-    }
-
-    .mainGerenciadores button[data-selected=true] {
-        color: var(--primary);
-    }
-
-    .mainNotFound {
-        color: var(--dark-gray)
-    }
-}
 
 [data-theme=light] .mainContainerControle button svg {
     color: var(--primary);
@@ -134,8 +132,10 @@
 [data-theme=light] .mainOrdenacao span {
     color: var(--black)
 }
-
-[data-theme=light] .mainGerenciadores:hover span,
-[data-theme=light] .mainOrdenacao:hover span {
+[data-theme=light] .mainGerenciadores button[data-selected=true] span{
+    color: var(--primary);
+}
+[data-theme=light] .mainGerenciadores span:hover,
+[data-theme=light] .mainOrdenacao span:hover {
     color: var(--primary)
 }
