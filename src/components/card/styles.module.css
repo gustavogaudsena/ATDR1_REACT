@@ -1,0 +1,147 @@
+.card {
+    display: flex;
+    box-shadow: 2px 2px 2px var(--black_op), -1px -1px 1px var(--black_op);
+    border-radius: 16px;
+    max-width: 80%;
+    min-width: 300px;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    background-color: var(--dark-gray_op);
+    color: var(--white);
+    position: relative;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: var(--gray_op);
+}
+
+.card .cardImage {
+    width: 100%;
+    height: 50vh;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.75rem 0.75rem 0 0;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.card .cardFavorito,
+.card .cardGerenciadores {
+    position: absolute;
+    top: 0;
+    padding: 0.45rem;
+    cursor: pointer;
+}
+
+.card .cardFavorito {
+    border-radius: 0.75rem 0 0 0;
+    background-color: var(--dark-gray);
+
+}
+
+.card .cardGerenciadores {
+    right: 0;
+    border-radius: 0 0.75rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--danger);
+
+}
+
+.card .cardGerenciadores svg {
+    color: var(--gray);
+}
+
+.card .cardGerenciadores svg:hover {
+    color: var(--gray_op);
+}
+
+.card .cardContainer {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: start;
+    justify-content: center;
+}
+
+.cardNome,
+.cardLocalidade,
+.cardClassificacao,
+.cardDiaria {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.card svg {
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+@media (min-width: 720px) {
+    .card {
+        max-width: 300px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .card {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    .card svg {
+        color: var(--primary);
+        font-size: 1rem;
+    }
+
+    .card .cardFavorito {
+        background-color: var(--gray);
+
+    }
+
+    .card .cardGerenciadores {
+        background-color: var(--gray);
+    }
+
+    .card .cardGerenciadores svg {
+        color: var(--danger);
+    }
+
+    .card .cardGerenciadores svg:hover {
+        color: var(--black);
+    }
+
+}
+
+[data-theme=light] .card {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+[data-theme=light] .card svg {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+[data-theme=light] .card .cardFavorito {
+    background-color: var(--gray);
+
+}
+
+[data-theme=light] .card .cardGerenciadores {
+    background-color: var(--gray);
+}
+
+[data-theme=light] .card .cardGerenciadores svg {
+    color: var(--danger);
+}
+
+[data-theme=light] .card .cardGerenciadores svg:hover {
+    color: var(--black);
+}

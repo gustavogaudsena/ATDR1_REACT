@@ -1,0 +1,53 @@
+.homeContainer {
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.homeMockContainer,
+.homeThemeContainer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.homeThemeContainer {
+    top: 1rem;
+    bottom: unset;
+}
+
+.homeMockButton {
+    cursor: pointer;
+    background-color: var(--secondary);
+    border-radius: 100%;
+    font-size: 2rem;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.homeMockButton:hover {
+    opacity: 0.75;
+}
+
+@media (prefers-color-scheme: light) {
+    .homeMockButton {
+        background-color: var(--primary);
+        color: var(--gray);
+    }
+}
+
+[data-theme=light] .homeMockButton {
+    background-color: var(--primary);
+    color: var(--gray);
+}
+
+@media (min-width: 720px) {
+    .homeMockButton {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+
+}

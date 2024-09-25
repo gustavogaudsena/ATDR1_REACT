@@ -1,0 +1,163 @@
+.detalhes {
+    background-color: var(--black);
+    padding: 1rem 1rem;
+}
+
+.detalhes .detalhesContainerPrincipal {
+    display: flex;
+}
+
+.detalhes .detalhesContainer svg {
+    color: var(--secondary)
+}
+
+.detalhesNotFound {
+    text-align: center;
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--gray_op);
+}
+
+.detalhes .detalhesContainerNome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detalhes .detalhesContainerNome .detalhesClassificacao {
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    gap: 0.5rem;
+}
+
+.detalhes .detalhesContainerNome .detalhesFavorito {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.detalhes .detalhesContainerNome .detalhesFavorito svg {
+    font-size: clamp(3rem, 2vw, 4rem);
+    color: var(--secondary)
+}
+
+.detalhes .detalhesLocalidade {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.detalhesContainerPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.detalhesContainerPrincipal .detalhesImagens {
+    width: 100%;
+    min-width: 60%;
+
+}
+
+.detalhesContainerPrincipal .detalhesImagens .detalhesImagemPrincipal {
+    max-width: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.detalhesContainerPrincipal .detalhesImagens .detalhesContainerImagensAdicionais {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.detalhesContainerPrincipal .detalhesImagens .detalhesContainerImagensAdicionais .detalhesImagemAdicionais {
+    flex-grow: 1;
+    width: calc(50% - 0.5rem);
+    height: auto;
+    object-fit: cover;
+}
+
+.detalhesContainerDescricao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: start;
+}
+
+.detalhesContainerDescricao .detalhesDescricao p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.detalhesContainerDescricao .detalhesServicos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.detalhesContainerDescricao .detalhesServicos svg {
+    font-size: clamp(2.5rem, 1.5vw, 3rem);
+}
+
+@media (min-width: 720px) {
+    .detalhesContainerPrincipal .detalhesImagens {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .detalhesContainerPrincipal .detalhesImagens .detalhesImagemPrincipal {
+        max-height: 60%;
+        object-fit: cover;
+    }
+
+    .detalhesContainerPrincipal .detalhesImagens .detalhesContainerImagensAdicionais {
+        flex-wrap: nowrap;
+    }
+
+    .detalhesContainerPrincipal .detalhesImagens .detalhesContainerImagensAdicionais .detalhesImagemAdicionais {
+        width: 25%;
+    }
+
+    .detalhesContainerPrincipal {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .detalhesContainerDescricao {
+        gap: 1.5rem;
+    }
+
+    .detalhesContainerDescricao .detalhesServicos {
+        justify-content: start;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    .detalhes {
+        background-color: var(--gray_op);
+    }
+
+    .detalhes .detalhesContainer svg {
+        color: var(--primary)
+    }
+
+    .detalhesNotFound {
+        color: var(--dark-gray)
+    }
+}
+
+[data-theme=light] .detalhes {
+    background-color: var(--gray_op);
+}
+
+[data-theme=light] .detalhes .detalhesContainer svg {
+    color: var(--primary)
+}
+
+[data-theme=light] .detalhesNotFound {
+    color: var(--dark-gray)
+}

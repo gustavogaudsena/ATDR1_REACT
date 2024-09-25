@@ -1,0 +1,119 @@
+.formularioBg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+.formularioClosingBg {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 9;
+}
+
+.formularioContainer {
+    background-color: var(--dark-gray);
+    height: 95vh;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0rem 1rem;
+    animation: showFormulario 200ms ease 0s;
+    z-index: 10;
+}
+
+.formularioContainer[data-animating=true] {
+    animation: hideFormulario 200ms ease 0s;
+}
+
+.headerFormulario {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerFormularioTitle {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.headerFormularioLink {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: clamp(1.5rem, 1.25vw, 1.5rem);
+    cursor: pointer;
+}
+
+.headerFormularioLink:hover {
+    opacity: 0.75;
+}
+
+
+@media (min-width: 720px) {
+    .formularioContainer {
+        width: 95%;
+        left: 2.5%;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    .headerFormulario,
+    .formularioContainer {
+        background-color: var(--gray);
+    }
+
+    .headerFormularioLink,
+    .headerFormularioTitle {
+        color: var(--black);
+    }
+}
+
+[data-theme=light] .headerFormulario,
+[data-theme=light] .formularioContainer {
+    background-color: var(--gray);
+}
+
+[data-theme=light] .headerFormularioLink,
+[data-theme=light] .headerFormularioTitle {
+    color: var(--black);
+}
+
+@keyframes showFormulario {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 95vh;
+    }
+}
+
+@keyframes hideFormulario {
+    0% {
+        height: 95vh;
+    }
+
+    100% {
+        height: 0;
+    }
+}

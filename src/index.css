@@ -1,22 +1,44 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary: #0E59AC;
+  --secondary: #FD9B63;
+  --white: #F1F1F1;
+  --black: #2a2a2a;
+  --dark-gray: #5A5555;
+  --gray: #EDEBEB;
+  --primary_op: #0E59AC4d;
+  --secondary_op: #FD9B634d;
+  --white_op: #F1F1F14d;
+  --black_op: #2a2a2a4d;
+  --dark-gray_op: #5A55554d;
+  --gray_op: #EDEBEB4d;
+  --danger: #730d0d;
+  --danger_op: #730d0d4d;
+
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+}
+
+:root [data-theme=dark] {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+button {
+  border: none;
+  background-color: none;
 }
 
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--black);
+    background-color: var(--gray);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+:root [data-theme=light] {
+  color: var(--black) !important;
+  background-color: var(--gray);
 }

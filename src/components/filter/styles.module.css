@@ -1,0 +1,83 @@
+.filterContainer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    margin: 0 auto;
+    width: fit-content;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.filterHeading,
+.filterForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.filterForm {
+    flex-direction: column;
+}
+
+.filterForm .filterInput {
+    min-width: 150px;
+    background-color: var(--white);
+    border-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+    color: var(--dark-gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.filterForm button {
+    background-color: var(--secondary);
+    padding: 0.25rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 100ms linear;
+}
+
+.filterForm button:hover {
+    opacity: 0.9;
+}
+
+
+@media (prefers-color-scheme: light) {
+    .filterHeading {
+        color: var(--black);
+    }
+
+    .filterContainer {
+        background-color: var(--white);
+        color: var(--dark-gray);
+    }
+
+    .filterForm button {
+        background-color: var(--primary);
+        color: var(--gray);
+    }
+
+
+}
+
+[data-theme=light] .filterHeading {
+    color: var(--black);
+}
+
+[data-theme=light] .filterContainer {
+    background-color: var(--white);
+    color: var(--dark-gray);
+}
+
+[data-theme=light] .filterForm button {
+    background-color: var(--primary);
+    color: var(--gray);
+}
